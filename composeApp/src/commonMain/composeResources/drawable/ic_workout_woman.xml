@@ -1,0 +1,19 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="185dp"
+    android:height="185dp"
+    android:viewportWidth="185"
+    android:viewportHeight="185">
+  <!-- Simple woman running illustration -->
+  <path
+      android:fillColor="#E0E0E0"
+      android:pathData="M92.5,50c-8.28,0 -15,6.72 -15,15s6.72,15 15,15 15,-6.72 15,-15 -6.72,-15 -15,-15z"/>
+  <path
+      android:fillColor="#E0E0E0"
+      android:pathData="M70,100c0,0 20,-10 45,-10s45,10 45,10v50c0,0 -20,10 -45,10s-45,-10 -45,-10z"/>
+  <path
+      android:fillColor="#E0E0E0"
+      android:pathData="M60,120l-10,20l10,10"/>
+  <path
+      android:fillColor="#E0E0E0"
+      android:pathData="M125,120l10,20l-10,10"/>
+</vector>

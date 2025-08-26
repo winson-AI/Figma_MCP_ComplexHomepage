@@ -1,0 +1,25 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="74dp"
+    android:height="146dp"
+    android:viewportWidth="74"
+    android:viewportHeight="146">
+  <!-- Simple woman doing pushups illustration -->
+  <path
+      android:fillColor="#E0E0E0"
+      android:pathData="M37,30c-5.52,0 -10,4.48 -10,10s4.48,10 10,10 10,-4.48 10,-10 -4.48,-10 -10,-10z"/>
+  <path
+      android:fillColor="#E0E0E0"
+      android:pathData="M25,60c0,0 12,-5 24,-5s24,5 24,5v40c0,0 -12,5 -24,5s-24,-5 -24,-5z"/>
+  <path
+      android:fillColor="#E0E0E0"
+      android:pathData="M20,110l-5,15l5,5"/>
+  <path
+      android:fillColor="#E0E0E0"
+      android:pathData="M54,110l5,15l-5,5"/>
+  <path
+      android:fillColor="#E0E0E0"
+      android:pathData="M15,80l10,10"/>
+  <path
+      android:fillColor="#E0E0E0"
+      android:pathData="M59,80l-10,10"/>
+</vector>
