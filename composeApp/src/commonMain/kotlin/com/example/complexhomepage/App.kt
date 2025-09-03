@@ -14,6 +14,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
@@ -49,47 +50,41 @@ fun App() {
 }
 
 @Composable
-private fun HomeScreen() {
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .background(Color.White)
-            .verticalScroll(rememberScrollState())
-    ) {
-        // Status Bar
-        StatusBar()
-        
-        // Top Navigation Bar
-        TopNavBar()
-        
-        // Main Content
-        Column(
-            modifier = Modifier.padding(horizontal = 24.dp)
-        ) {
-            // Home Title
-            Text(
-                text = "Home",
-                style = MaterialTheme.typography.headlineMedium.copy(
-                    color = Color(0xFF303437),
-                    fontWeight = FontWeight.Bold
-                ),
-                modifier = Modifier.padding(top = 16.dp, bottom = 16.dp)
-            )
-            
-            // Upcoming Section
-            UpcomingSection()
-            
-            // Gyms Near You Section
-            GymsNearYouSection()
-            
-            // Activities Section
-            ActivitiesSection()
-            
-            Spacer(modifier = Modifier.height(100.dp))
+fun HomeScreen() {
+    Scaffold(
+        bottomBar = {
+            BottomNavBar()
         }
-        
-        // Bottom Navigation Bar
-        BottomNavBar()
+    ) { innerPadding ->
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .background(Color.White)
+                .padding(innerPadding) // 避免内容被底部栏遮挡
+                .verticalScroll(rememberScrollState())
+        ) {
+            StatusBar()
+            TopNavBar()
+
+            Column(
+                modifier = Modifier.padding(horizontal = 24.dp)
+            ) {
+                Text(
+                    text = "Home",
+                    style = MaterialTheme.typography.headlineMedium.copy(
+                        color = Color(0xFF303437),
+                        fontWeight = FontWeight.Bold
+                    ),
+                    modifier = Modifier.padding(top = 16.dp, bottom = 16.dp)
+                )
+
+                UpcomingSection()
+                GymsNearYouSection()
+                ActivitiesSection()
+
+                Spacer(modifier = Modifier.height(100.dp))
+            }
+        }
     }
 }
 
@@ -215,7 +210,7 @@ private fun UpcomingSection() {
                 Image(
                     painter = painterResource(Res.drawable.ic_menu),
                     contentDescription = "Menu",
-                    modifier = Modifier.size(24.dp)
+                    modifier = Modifier.size(24.dp).alpha(0f)
                 )
             }
         }
@@ -317,7 +312,7 @@ private fun UpcomingCard(activity: UpcomingActivity) {
                 painter = painterResource(activity.illustration),
                 contentDescription = activity.title,
                 modifier = Modifier
-                    .size(185.dp)
+                    .size(80.dp,150.dp)
                     .align(Alignment.CenterEnd)
                     .offset(x = 40.dp)
             )
