@@ -314,7 +314,7 @@ private fun UpcomingCard(activity: UpcomingActivity) {
                 modifier = Modifier
                     .size(80.dp,150.dp)
                     .align(Alignment.CenterEnd)
-                    .offset(x = 40.dp)
+                    .offset(x = -50.dp, y=10.dp)
             )
         }
     }
