@@ -312,9 +312,9 @@ private fun UpcomingCard(activity: UpcomingActivity) {
                 painter = painterResource(activity.illustration),
                 contentDescription = activity.title,
                 modifier = Modifier
-                    .size(87.dp,146.dp)
+                    .size(80.dp,150.dp)
                     .align(Alignment.CenterEnd)
-                    .offset(x = -50.dp, y=36.dp)
+                    .offset(x = -60.dp, y=34.dp)
             )
         }
     }
